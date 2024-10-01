@@ -42,13 +42,13 @@
       size = 30000;
     };
     shellAliases = {
-      nixpull = "cd $HOME/dotfiles && git pull";
-      update = "sudo nixos-rebuild switch --flake $HOME/dotfiles";
+      nixpull = "cd $HOME/flake && git pull";
+      update = "sudo nixos-rebuild switch --flake $HOME/flake";
       refresh = "nixpull && update";
       clear = "";
       sail = "[ -f sail ] && sh sail || sh vendor/bin/sail";
       ls = "exa";
-      nixbackup = ''cd $HOME/dotfiles && git add . && git commit -m "backup: $(date -I)" && git push'';
+      nixbackup = ''cd $HOME/flake && git add . && git commit -m "backup: $(date -I)" && git push'';
     };
     initExtra = ''
       repeat $LINES print
