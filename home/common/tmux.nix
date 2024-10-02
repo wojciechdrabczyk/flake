@@ -87,6 +87,7 @@
     bind l select-pane -R
 
     bind-key -n C-q next-window
+    bind-key -n C-p previous-window
     set -g mouse on
 
   '';

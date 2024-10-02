@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    nodejs_22
     wget
     fastfetch
     # archives
